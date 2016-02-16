@@ -1,7 +1,3 @@
-#
-#  Be sure to run `pod spec lint configurations.podspec' to ensure this is a
-#
-
 Pod::Spec.new do |s|
   s.name             = "Configurations"
   s.version          = "0.0.1"
@@ -10,10 +6,10 @@ Pod::Spec.new do |s|
 Easily define different configuration values per application configuration using a single plist.
 DESC
   s.homepage         = "https://github.com/fetch/ios-configurations"
-  s.license          = "MIT"
+  s.license          = { type: "MIT", file: "LICENSE" }
   s.author           = { "Koen Punt" => "koen@fetch.nl" }
   s.social_media_url = "https://twitter.com/fetch"
-  s.platform         = :ios
+  s.platform         = :ios, "8.0"
   s.source           = { git: "https://github.com/fetch/ios-configurations.git", tag: "v#{s.version.to_s}" }
   s.source_files     = "Configurations"
 end
