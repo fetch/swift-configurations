@@ -25,13 +25,14 @@ public class Configuration: NSObject {
     private override init() {
         super.init()
 
-        self.configurationName = NSBundle.mainBundle().infoDictionary?[CurrentConfigurationPlistKey] as? String
+        let bundle = NSBundle.mainBundle()
+
+        self.configurationName = bundle.infoDictionary![CurrentConfigurationPlistKey] as? String
         
         guard self.configurationName != nil else {
             fatalError("No Configuration property found in plist")
         }
         
-        let bundle = NSBundle(forClass: self.dynamicType)
         let plistName = bundle.infoDictionary![self.ConfigurationPlistKey] as! String
         let plistPath = bundle.pathForResource(plistName, ofType: "plist")
         let dictionary = NSDictionary(contentsOfFile: plistPath!)
