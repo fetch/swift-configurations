@@ -1,0 +1,17 @@
+workspace 'ConfigurationsExample'
+
+use_frameworks!
+
+def select_pods
+  pod 'Configurations', path: '../'
+end
+
+target 'ConfigurationsExampleOSX' do
+  platform :osx, '10.9'
+  select_pods
+end
+
+target 'ConfigurationsExampleIOS' do
+  platform :ios, '8.0'
+  select_pods
+end

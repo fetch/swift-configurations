@@ -6,10 +6,16 @@ Pod::Spec.new do |s|
 Easily define different configuration values per application configuration using a single plist.
 DESC
   s.homepage         = "https://github.com/fetch/ios-configurations"
-  s.license          = { type: "MIT", file: "LICENSE" }
+  s.license          = "LICENSE"
   s.author           = { "Koen Punt" => "koen@fetch.nl" }
   s.social_media_url = "https://twitter.com/fetch"
-  s.platform         = :ios, "8.0"
+
+  s.ios.deployment_target     = "8.0"
+  s.osx.deployment_target     = "10.9"
+  s.tvos.deployment_target    = "9.0"
+  s.watchos.deployment_target = "2.0"
+
   s.source           = { git: "https://github.com/fetch/ios-configurations.git", tag: "v#{s.version.to_s}" }
   s.source_files     = "Configurations"
+  s.requires_arc     = true
 end
