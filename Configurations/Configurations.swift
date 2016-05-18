@@ -12,7 +12,7 @@ public class Configuration: NSObject {
     let ConfigurationPlistKey = "ConfigurationFileName"
     let CurrentConfigurationPlistKey = "Configuration"
     
-    private var configurationName: String?
+    public private(set) var configurationName: String?
     private var dictionary: NSDictionary!
     
     public static func defaultConfiguration() -> Configuration {
