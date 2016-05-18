@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Easily define different configuration values per application configuration using a single plist.
 DESC
-  s.homepage         = "https://github.com/fetch/ios-configurations"
+  s.homepage         = "https://github.com/fetch/swift-configurations"
   s.license          = "LICENSE"
   s.author           = { "Koen Punt" => "koen@fetch.nl" }
   s.social_media_url = "https://twitter.com/fetch"
@@ -15,7 +15,7 @@ DESC
   s.tvos.deployment_target    = "9.0"
   s.watchos.deployment_target = "2.0"
 
-  s.source           = { git: "https://github.com/fetch/ios-configurations.git", tag: "v#{s.version.to_s}" }
+  s.source           = { git: "https://github.com/fetch/swift-configurations.git", tag: "v#{s.version.to_s}" }
   s.source_files     = "Configurations"
   s.requires_arc     = true
 end
