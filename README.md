@@ -34,7 +34,7 @@ And get the default configuration:
 
 ```swift
 let configuration = Configuration.defaultConfiguration()
-if let someValue = config["someKey"] as? String {
+if let someValue = configuration["someKey"] as? String {
     print("someKey: \(someValue)")
 }
 ```
