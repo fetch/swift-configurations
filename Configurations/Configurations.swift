@@ -25,7 +25,7 @@ public class Configuration: NSObject {
     private override init() {
         super.init()
 
-        let bundle = NSBundle.mainBundle()
+        let bundle = Bundle.main
 
         self.configurationName = bundle.infoDictionary![CurrentConfigurationPlistKey] as? String
         
@@ -34,15 +34,15 @@ public class Configuration: NSObject {
         }
         
         let plistName = bundle.infoDictionary![self.ConfigurationPlistKey] as! String
-        let plistPath = bundle.pathForResource(plistName, ofType: "plist")
+        let plistPath = bundle.path(forResource: plistName, ofType: "plist")
         let dictionary = NSDictionary(contentsOfFile: plistPath!)
         
-        self.dictionary = dictionary?.valueForKey(self.configurationName!) as! NSDictionary
+        self.dictionary = dictionary?.value(forKey: self.configurationName!) as! NSDictionary
     }
     
     public subscript(key: String) -> AnyObject? {
         get {
-            return self.dictionary.valueForKey(key)
+            return self.dictionary.value(forKey: key) as AnyObject
         }
     }
 
