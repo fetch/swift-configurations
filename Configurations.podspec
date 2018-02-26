@@ -18,4 +18,5 @@ DESC
   s.source           = { git: "https://github.com/fetch/swift-configurations.git", tag: "v#{s.version.to_s}" }
   s.source_files     = "Configurations"
   s.requires_arc     = true
+  s.swift_version    = "3"
 end
