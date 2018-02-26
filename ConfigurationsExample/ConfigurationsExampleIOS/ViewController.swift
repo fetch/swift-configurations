@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let configuration = Configuration.default
+        let configuration = Configuration.current
         
         self.greetingLabel.text = configuration["Greeting"]!
     }

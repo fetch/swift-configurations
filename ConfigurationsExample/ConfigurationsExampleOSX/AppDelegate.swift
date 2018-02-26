@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let configuration = Configuration.default
+        let configuration = Configuration.current
 
         self.greetingLabel.stringValue = configuration["Greeting"]!
     }

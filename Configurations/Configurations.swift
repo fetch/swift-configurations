@@ -15,7 +15,7 @@ public class Configuration: NSObject {
     public private(set) var configurationName: String?
     private var dictionary: NSDictionary!
 
-    public static let `default` = Configuration()
+    public static let current = Configuration()
 
     private override init() {
         super.init()
