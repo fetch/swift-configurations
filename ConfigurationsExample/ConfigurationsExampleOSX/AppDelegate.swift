@@ -15,15 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var greetingLabel: NSTextField!
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let configuration = Configuration.defaultConfiguration()
-        
-        if let value = configuration["Greeting"] as? String {
-            self.greetingLabel.stringValue = value
-        }
+        let configuration = Configuration.default
 
+        self.greetingLabel.stringValue = configuration["Greeting"]!
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

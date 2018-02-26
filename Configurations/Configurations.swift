@@ -14,14 +14,9 @@ public class Configuration: NSObject {
     
     public private(set) var configurationName: String?
     private var dictionary: NSDictionary!
-    
-    public static func defaultConfiguration() -> Configuration {
-        struct Static {
-            static var instance = Configuration()
-        }
-        return Static.instance
-    }
-    
+
+    public static let `default` = Configuration()
+
     private override init() {
         super.init()
 
@@ -30,7 +25,8 @@ public class Configuration: NSObject {
         self.configurationName = bundle.infoDictionary![CurrentConfigurationPlistKey] as? String
         
         guard self.configurationName != nil else {
-            fatalError("No Configuration property found in plist")
+            assertionFailure("No Configuration property found in plist")
+            return
         }
         
         let plistName = bundle.infoDictionary![self.ConfigurationPlistKey] as! String
@@ -40,9 +36,9 @@ public class Configuration: NSObject {
         self.dictionary = dictionary?.value(forKey: self.configurationName!) as? NSDictionary
     }
     
-    public subscript(key: String) -> AnyObject? {
+    public subscript<T>(key: String) -> T? {
         get {
-            return self.dictionary.value(forKey: key) as AnyObject
+            return self.dictionary.value(forKey: key) as? T
         }
     }
 
