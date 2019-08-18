@@ -37,7 +37,7 @@ public class Configuration: NSObject {
         let plistPath = bundle.path(forResource: plistName, ofType: "plist")
         let dictionary = NSDictionary(contentsOfFile: plistPath!)
         
-        self.dictionary = dictionary?.value(forKey: self.configurationName!) as! NSDictionary
+        self.dictionary = dictionary?.value(forKey: self.configurationName!) as? NSDictionary
     }
     
     public subscript(key: String) -> AnyObject? {

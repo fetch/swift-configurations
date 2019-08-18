@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Configurations"
-  s.version          = "0.0.5"
+  s.version          = "0.1.0"
   s.summary          = "A super minimal configuration framework in Swift."
   s.description      = <<-DESC
 Easily define different configuration values per application configuration using a single plist.
@@ -18,5 +18,5 @@ DESC
   s.source           = { git: "https://github.com/fetch/swift-configurations.git", tag: "v#{s.version.to_s}" }
   s.source_files     = "Configurations"
   s.requires_arc     = true
-  s.swift_version    = "3"
+  s.swift_version    = "5"
 end

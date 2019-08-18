@@ -152,7 +152,6 @@
 				5E1D4E1D1C736A2B0071F3AA /* Frameworks */,
 				5E1D4E1E1C736A2B0071F3AA /* Resources */,
 				F4C7D201F38224AE4BA61896 /* [CP] Embed Pods Frameworks */,
-				A8A8B1717186F176496D3870 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,7 +171,6 @@
 				5E1D4E531C7375640071F3AA /* Frameworks */,
 				5E1D4E541C7375640071F3AA /* Resources */,
 				6CC31ECADCA01A55B9A40795 /* [CP] Embed Pods Frameworks */,
-				16DC8D70234E0E523D1CC2DE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,17 +193,17 @@
 				TargetAttributes = {
 					5E1D4E1F1C736A2B0071F3AA = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1030;
 					};
 					5E1D4E551C7375640071F3AA = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
 			buildConfigurationList = 5E1D4E1B1C736A2B0071F3AA /* Build configuration list for PBXProject "ConfigurationsExample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -247,21 +245,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16DC8D70234E0E523D1CC2DE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleIOS/Pods-ConfigurationsExampleIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		26F8EDB44DFAF7A1A13AC80C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,7 +269,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleIOS/Pods-ConfigurationsExampleIOS-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfigurationsExampleIOS/Pods-ConfigurationsExampleIOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Configurations-iOS/Configurations.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -295,22 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleIOS/Pods-ConfigurationsExampleIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8A8B1717186F176496D3870 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleOSX/Pods-ConfigurationsExampleOSX-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfigurationsExampleIOS/Pods-ConfigurationsExampleIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EE70519A7A8BB685F7C46807 /* [CP] Check Pods Manifest.lock */ = {
@@ -337,7 +305,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleOSX/Pods-ConfigurationsExampleOSX-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfigurationsExampleOSX/Pods-ConfigurationsExampleOSX-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Configurations-macOS/Configurations.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -346,7 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ConfigurationsExampleOSX/Pods-ConfigurationsExampleOSX-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfigurationsExampleOSX/Pods-ConfigurationsExampleOSX-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,7 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.fetch.mobile.ConfigurationsExampleOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -508,7 +476,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.fetch.mobile.ConfigurationsExampleOSX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -528,7 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.fetch.mobile.ConfigurationsExampleIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -548,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = nl.fetch.mobile.ConfigurationsExampleIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
