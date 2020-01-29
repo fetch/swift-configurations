@@ -16,11 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let configuration = Configuration.defaultConfiguration()
+        let configuration = Configuration.current
         
-        if let value = configuration["Greeting"] as? String {
-            self.greetingLabel.text = value
-        }
+        self.greetingLabel.text = configuration["Greeting"]!
     }
 
     override func didReceiveMemoryWarning() {

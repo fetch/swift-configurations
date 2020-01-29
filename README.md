@@ -30,14 +30,27 @@ Import the framework:
 import Configurations
 ```
 
-And get the default configuration:
+And get the current configuration:
 
 ```swift
-let configuration = Configuration.defaultConfiguration()
+let configuration = Configuration.current
 if let someValue = configuration["someKey"] as? String {
     print("someKey: \(someValue)")
 }
 ```
+
+By making use of generics the return type of a value can be inferred from the
+receiver.
+
+For example; the `text` property of a `UILabel` expects a `String`;
+
+```swift
+let configuration = Configuration.current
+let label = UILabel()
+label.text = configuration["someKey"]!
+```
+
+But do make sure that the value in the plist is of a matching type.
 
 ## Contributing
 
